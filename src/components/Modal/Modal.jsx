@@ -17,6 +17,7 @@ const EditModal = (props) => {
     console.log(id);
     const movie = { id: id, title: data.title };
     dispatch({ type: EDIT_ITEM, movie });
+    toggle();
   };
 
   return (

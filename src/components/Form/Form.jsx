@@ -11,6 +11,8 @@ const Form = ({onSubmit} ) => {
   return (
     <RSForm onSubmit={handleSubmit(onSubmit)} >
       <Input name="title" innerRef={register}/>
+      <Input name="picture" innerRef={register}/>
+      <Input name="description" innerRef={register}/>
       <Input type="submit"/>
 
     </RSForm>

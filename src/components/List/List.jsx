@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
-import { Row } from "reactstrap"
-import {REMOVE_ITEM} from "../../redux/actions/movies"
+import { Row } from "reactstrap";
+import {REMOVE_ITEM} from "../../redux/actions/movies";
 import  Movie from "../Movie";
 
 

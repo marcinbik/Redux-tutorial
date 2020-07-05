@@ -10,7 +10,7 @@ const App = () => {
   const dispatch = useDispatch();
   
   const onNewItem = (data) => {
-    const movie = { id: lodash.uniqueId(), title: data.title };
+    const movie = { id: lodash.uniqueId(), title: data.title, picture: data.picture, description: data.description };
     dispatch({ type: ADD_ITEM, movie });
   };
   return (

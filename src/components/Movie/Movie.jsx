@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card, Col, CardBody, CardTitle, CardText, ButtonGroup } from "reactstrap";
 import Modal from "../Modal";
 
-const Movie = ({ id, title, picture, description, onRemove }) => {
+const Movie = ({ movie: {id, title, picture, description}, onRemove, onEdit, isModalOpen, toggle }) => {
   
   return (
     <Col xs={12} md={4} lg={3}>
@@ -20,7 +20,12 @@ const Movie = ({ id, title, picture, description, onRemove }) => {
           >
             delete
           </Button>
-          <Modal id={id} />
+          <Button 
+            color="warning"
+            size="sm"
+            className="mx-3"
+            onClick={() => toggle()} >edit</Button>
+          <Modal id={id} onEdit={onEdit} isModalOpen={isModalOpen} toggle={toggle} />
           </ButtonGroup>
         </CardBody>
       </Card>

@@ -4,8 +4,8 @@ import Form from "../Form";
 import { useDispatch } from "react-redux";
 import { EDIT_ITEM } from "../../redux/actions/movies";
 
-const EditModal = (props) => {
-  const { buttonLabel = "edit", id } = props;
+const EditModal = ({ buttonLabel = "edit", id }) => {
+  
 
   const [modal, setModal] = useState(false);
 
@@ -13,9 +13,9 @@ const EditModal = (props) => {
 
   const dispatch = useDispatch();
 
-  const handleEdit = (data) => {
-    console.log(id);
-    const movie = { id: id, title: data.title };
+  const onEdit = (data) => {
+   
+    const movie = { id,...data };
     dispatch({ type: EDIT_ITEM, movie });
     toggle();
   };
@@ -28,7 +28,7 @@ const EditModal = (props) => {
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit movie</ModalHeader>
         <ModalBody>
-          <Form onSubmit={handleEdit} />
+          <Form onSubmit={onEdit} />
         </ModalBody>
         <ModalFooter>
           <Button color="secondary" onClick={toggle}>

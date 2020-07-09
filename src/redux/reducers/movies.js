@@ -12,7 +12,7 @@ const moviesReducer = (state = initialState, action) => {
       return state.filter(({ id }) => id !== action.id);
 
     case EDIT_ITEM:
-      console.log(action);
+      console.log(action.movie.id);
       return state.map((movie) =>( movie.id ===action.movie.id) ? action.movie : movie  );
 
     default:

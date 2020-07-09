@@ -1,13 +1,14 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import Form from "../Form";
+import Form from "../Form/Form";
 
-const EditModal = ({ buttonLabel = "edit", isModalOpen, onEdit, toggle }) => {
+
+const EditModal = ({id, isModalOpen, onEdit , toggle }) => {
   return (
-    <Modal isModalOpen={isModalOpen} toggle={toggle}>
+    <Modal isOpen={isModalOpen} toggle={toggle}>
       <ModalHeader toggle={toggle}>Edit movie</ModalHeader>
       <ModalBody>
-        <Form onSubmit={onEdit} />
+        <Form onSubmit={onEdit} id={id} toggle={toggle} />
       </ModalBody>
       <ModalFooter>
         <Button color="secondary" onClick={toggle}>

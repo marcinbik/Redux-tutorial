@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Input, Form as RSForm, Label } from "reactstrap";
 
-const Form = ({ onSubmit,id}) => {
+const Form = ({ onSubmit,id }) => {
   const { register, handleSubmit } = useForm({defaultValues:{
     id:id
   }});

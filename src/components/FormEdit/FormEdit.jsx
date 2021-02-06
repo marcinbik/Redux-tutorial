@@ -10,7 +10,6 @@ const Form = ({ onSubmit,id }) => {
   return (
     <RSForm onSubmit={handleSubmit(onSubmit)}>
       <Input type="hidden" name="id" innerRef={register}/>
-      <Label for="title" >title</Label>
       <Input name="title" innerRef={register} />
       <Label for="picture">picture</Label>
       <Input name="picture" innerRef={register} />

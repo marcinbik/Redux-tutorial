@@ -6,10 +6,10 @@ const Form = ({ onSubmit,id }) => {
   const { register, handleSubmit } = useForm({defaultValues:{
     id:id
   }});
-    console.log(id+" form,js");
+  
   return (
     <RSForm onSubmit={handleSubmit(onSubmit)}>
-      <Input type="hidden" name="id" innerRef={register}/>
+      <Input type="text" name="id" innerRef={register}/>
       <Input name="title" innerRef={register} />
       <Label for="picture">picture</Label>
       <Input name="picture" innerRef={register} />

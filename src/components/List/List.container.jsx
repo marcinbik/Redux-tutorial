@@ -17,7 +17,7 @@ const ListContainer = () => {
 
   const handleEdit = (data) => {
     const movie = { ...data};
-    console.log(movie);
+   
     dispatch({ type: EDIT_ITEM, movie});
   };
 

@@ -7,7 +7,8 @@ const ListContainer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
 
-  const toggle = () => {
+  const toggle = (id) => {
+    id={id}
     setIsModalOpen(!isModalOpen);
   };
 

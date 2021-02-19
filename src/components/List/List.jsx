@@ -13,7 +13,7 @@ const List = ({ onRemove, onEdit, isModalOpen, toggle }) => {
 
   return (
     <Row>
-      {movies.map(movie => <Movie key={movie.id} movie={movie} onRemove={onRemove} isModalOpen={isModalOpen} onEdit={onEdit} toggle={toggle} />)}
+      {movies.map(movie => <Movie key={movie.id} id={movie.id} movie={movie} onRemove={onRemove} isModalOpen={isModalOpen} onEdit={onEdit} toggle={toggle} />)}
     </Row>
   );
 };
